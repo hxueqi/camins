@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camins/models/trail_tag.dart';
 import 'package:camins/styles/app_styles.dart';
+import 'package:camins/widgets/section_header.dart';
 import 'package:camins/widgets/tag_chip.dart';
 
 class AboutSection extends StatelessWidget {
@@ -20,7 +21,7 @@ class AboutSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Sobre la ruta', style: AppStyles.sectionTitle),
+          SectionHeader(title: 'Sobre la ruta'),
           AppStyles.smallSeparator,
           Text(description, style: AppStyles.bodyText),
           AppStyles.mediumSeparator,

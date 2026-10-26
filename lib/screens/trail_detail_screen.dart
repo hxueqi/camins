@@ -3,6 +3,7 @@ import 'package:camins/models/trail_tag.dart';
 import 'package:camins/styles/app_styles.dart';
 import 'package:camins/widgets/about_section.dart';
 import 'package:camins/widgets/bottom_action_bar.dart';
+import 'package:camins/widgets/photo_grid.dart';
 import 'package:camins/widgets/stats_card.dart';
 import 'package:camins/widgets/trail_header.dart';
 
@@ -53,6 +54,18 @@ class TrailDetailScreen extends StatelessWidget {
               TrailTag(icon: Icons.pets, label: 'Gossos permesos'),
               TrailTag(icon: Icons.water_drop, label: "Font d'aigua"),
               TrailTag(icon: Icons.cabin, label: 'Refugi'),
+            ],
+          ),
+          AppStyles.bigSeparator,
+          // Zona 5: Fotos
+          PhotoGrid(
+            imagePaths: [
+              'assets/images/lake.jpg',
+              'assets/images/peaks.jpg',
+              'assets/images/forest.jpg',
+              'assets/images/meadow.jpg',
+              'assets/images/waterfall.jpg',
+              'assets/images/sunset.jpg',
             ],
           ),
           AppStyles.bigSeparator,
