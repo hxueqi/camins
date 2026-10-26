@@ -26,8 +26,8 @@ class PhotoGrid extends StatelessWidget {
           AppStyles.mediumSeparator,
           GridView.count(
             crossAxisCount: 3,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
+            mainAxisSpacing: AppStyles.gap,
+            crossAxisSpacing: AppStyles.gap,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.zero,

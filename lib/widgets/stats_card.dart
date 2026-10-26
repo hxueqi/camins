@@ -21,8 +21,10 @@ class StatsCard extends StatelessWidget {
     return Card(
       color: AppStyles.white,
       margin: EdgeInsets.zero,
-      elevation: 4,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      elevation: AppStyles.cardElevation,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppStyles.cardRadius),
+      ),
       child: SizedBox(
         height: AppStyles.statsCardHeight,
         child: Row(
@@ -69,8 +71,8 @@ class StatsCard extends StatelessWidget {
     return VerticalDivider(
       width: 1,
       thickness: 1,
-      indent: 20,
-      endIndent: 20,
+      indent: AppStyles.dividerIndent,
+      endIndent: AppStyles.dividerIndent,
       color: AppStyles.divider,
     );
   }

@@ -10,13 +10,13 @@ class CircleIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {},
-      icon: Icon(icon, size: 20),
+      icon: Icon(icon, size: AppStyles.iconMedium),
       style: IconButton.styleFrom(
         backgroundColor: AppStyles.white,
         foregroundColor: AppStyles.darkText,
         fixedSize: Size.square(AppStyles.roundButtonSize),
-        elevation: 2,
-        shadowColor: Colors.black26,
+        elevation: AppStyles.buttonElevation,
+        shadowColor: AppStyles.shadow,
       ),
     );
   }

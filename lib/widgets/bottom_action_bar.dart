@@ -13,8 +13,8 @@ class BottomActionBar extends StatelessWidget {
         color: AppStyles.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black12,
-            blurRadius: 12,
+            color: AppStyles.shadow,
+            blurRadius: AppStyles.barShadowBlur,
             offset: Offset(0, -2),
           ),
         ],
@@ -24,7 +24,7 @@ class BottomActionBar extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: AppStyles.horizontalPadding,
-            vertical: 12,
+            vertical: AppStyles.barVerticalPadding,
           ),
           child: Row(
             children: [
@@ -66,7 +66,9 @@ class BottomActionBar extends StatelessWidget {
                   style: FilledButton.styleFrom(
                     backgroundColor: AppStyles.green,
                     foregroundColor: AppStyles.white,
-                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: AppStyles.primaryButtonPadding,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                         AppStyles.buttonRadius,

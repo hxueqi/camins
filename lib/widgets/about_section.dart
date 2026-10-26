@@ -26,8 +26,8 @@ class AboutSection extends StatelessWidget {
           Text(description, style: AppStyles.bodyText),
           AppStyles.mediumSeparator,
           Wrap(
-            spacing: 8,
-            runSpacing: 8,
+            spacing: AppStyles.gap,
+            runSpacing: AppStyles.gap,
             children: [
               for (final tag in tags) TagChip(icon: tag.icon, label: tag.label),
             ],

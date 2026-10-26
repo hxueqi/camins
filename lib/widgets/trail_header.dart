@@ -35,7 +35,7 @@ class TrailHeader extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Colors.transparent, Colors.black87],
+                colors: AppStyles.headerGradient,
                 stops: [0.3, 1.0],
               ),
             ),
@@ -62,10 +62,10 @@ class TrailHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                  padding: AppStyles.badgePadding,
                   decoration: BoxDecoration(
                     color: AppStyles.orange,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(AppStyles.pillRadius),
                   ),
                   child: Text(region.toUpperCase(), style: AppStyles.regionBadge),
                 ),
@@ -74,7 +74,7 @@ class TrailHeader extends StatelessWidget {
                 AppStyles.smallSeparator,
                 Row(
                   children: [
-                    Icon(Icons.star, color: AppStyles.orange, size: 20),
+                    Icon(Icons.star, color: AppStyles.orange, size: AppStyles.iconMedium),
                     AppStyles.tinySeparator,
                     Text(rating, style: AppStyles.ratingValue),
                     AppStyles.tinySeparator,

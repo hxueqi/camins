@@ -11,6 +11,12 @@ class AppStyles {
   static final Color white = Colors.white;
   static final Color divider = Color(0xFFE6EBE9);
   static final Color photoOverlay = Colors.black54;
+  static final Color shadow = Colors.black12;
+  static final Color ratingCountColor = Colors.white70;
+  static final List<Color> headerGradient = [
+    Colors.transparent,
+    Colors.black87,
+  ];
 
   // Separators
   static final Widget tinySeparator = SizedBox(width: 4, height: 4);
@@ -29,6 +35,26 @@ class AppStyles {
   static const double stageRowHeight = 68;
   static const double stageCircleSize = 32;
   static const double stageLineWidth = 2;
+  static const double gap = 8;
+  static const double pillRadius = 20;
+  static const double cardRadius = 20;
+  static const double cardElevation = 4;
+  static const double buttonElevation = 2;
+  static const double dividerIndent = 20;
+  static const double barVerticalPadding = 12;
+  static const double barShadowBlur = 12;
+  static const double primaryButtonPadding = 24;
+  static const double iconSmall = 16;
+  static const double iconMedium = 20;
+  static const double iconLarge = 22;
+  static const EdgeInsets badgePadding = EdgeInsets.symmetric(
+    horizontal: 12,
+    vertical: 4,
+  );
+  static const EdgeInsets tagPadding = EdgeInsets.symmetric(
+    horizontal: 12,
+    vertical: 8,
+  );
   static const double statsCardOverlap = 44;
   static const double roundButtonSize = 44;
   static const double roundButtonTop = 44;
@@ -97,6 +123,6 @@ class AppStyles {
   );
   static final TextStyle ratingCount = TextStyle(
     fontSize: 15,
-    color: Colors.white70,
+    color: ratingCountColor,
   );
 }

@@ -20,7 +20,7 @@ class StatItem extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, color: iconColor ?? AppStyles.green, size: 22),
+        Icon(icon, color: iconColor ?? AppStyles.green, size: AppStyles.iconLarge),
         AppStyles.tinySeparator,
         Text(value, style: AppStyles.statValue),
         Text(label, style: AppStyles.smallText),

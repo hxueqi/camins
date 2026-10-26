@@ -10,15 +10,15 @@ class TagChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      padding: AppStyles.tagPadding,
       decoration: BoxDecoration(
         color: AppStyles.lightGreen,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppStyles.pillRadius),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, color: AppStyles.green, size: 16),
+          Icon(icon, color: AppStyles.green, size: AppStyles.iconSmall),
           AppStyles.tinySeparator,
           Text(label, style: AppStyles.tagText),
         ],
