@@ -26,6 +26,7 @@ class StageTile extends StatelessWidget {
         children: [
           SizedBox(
             width: AppStyles.stageCircleSize,
+            height: AppStyles.stageRowHeight,
             child: Stack(
               alignment: Alignment.center,
               children: [
