@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:camins/styles/app_styles.dart';
+import 'package:camins/widgets/photo_tile.dart';
 import 'package:camins/widgets/section_header.dart';
 
 class PhotoGrid extends StatelessWidget {
-  const PhotoGrid({super.key, required this.imagePaths});
+  const PhotoGrid({
+    super.key,
+    required this.imagePaths,
+    this.morePhotosCount = 0,
+  });
 
   final List<String> imagePaths;
+
+  /// Photos not shown in the grid. If > 0, the last photo shows "+N".
+  final int morePhotosCount;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +32,13 @@ class PhotoGrid extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.zero,
             children: [
-              for (final path in imagePaths)
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(AppStyles.photoRadius),
-                  child: Image.asset(path, fit: BoxFit.cover),
+              for (var i = 0; i < imagePaths.length; i++)
+                PhotoTile(
+                  imagePath: imagePaths[i],
+                  overlayLabel:
+                      i == imagePaths.length - 1 && morePhotosCount > 0
+                      ? '+$morePhotosCount'
+                      : null,
                 ),
             ],
           ),

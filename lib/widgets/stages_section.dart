@@ -22,7 +22,8 @@ class StagesSection extends StatelessWidget {
             StageTile(
               number: i + 1,
               stage: stages[i],
-              isHighlighted: i == stages.length - 1,
+              isFirst: i == 0,
+              isLast: i == stages.length - 1,
             ),
         ],
       ),

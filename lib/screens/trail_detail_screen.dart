@@ -19,27 +19,31 @@ class TrailDetailScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          // Zona 2: Títol
-          TrailHeader(
-            imagePath: 'assets/images/header.jpg',
-            region: "Pirineu · Val d'Aran",
-            title: 'Circuit dels Estanys de Colomers',
-            rating: '4,8',
-            reviewCount: 126,
-          ),
-          // Zona 3: Fitxa de dades
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-              AppStyles.cardMargin,
-              AppStyles.cardMargin,
-              AppStyles.cardMargin,
-              0,
-            ),
-            child: StatsCard(
-              distance: '9,4 km',
-              elevation: '620 m',
-              duration: '3 h 45',
-              difficulty: 'Moderada',
+          // Zona 2 (Títol) + Zona 3 (Fitxa de dades, solapada)
+          SizedBox(
+            height: AppStyles.headerHeight + AppStyles.statsCardOverlap,
+            child: Stack(
+              children: [
+                TrailHeader(
+                  imagePath: 'assets/images/header.jpg',
+                  region: "Pirineu · Val d'Aran",
+                  title: 'Circuit dels Estanys de Colomers',
+                  rating: '4,8',
+                  reviewCount: 126,
+                  bottomInset: AppStyles.statsCardOverlap,
+                ),
+                Positioned(
+                  left: AppStyles.cardMargin,
+                  right: AppStyles.cardMargin,
+                  bottom: 0,
+                  child: StatsCard(
+                    distance: '9,4 km',
+                    elevation: '620 m',
+                    duration: '3 h 45',
+                    difficulty: 'Moderada',
+                  ),
+                ),
+              ],
             ),
           ),
           AppStyles.bigSeparator,
@@ -69,6 +73,7 @@ class TrailDetailScreen extends StatelessWidget {
               'assets/images/waterfall.jpg',
               'assets/images/sunset.jpg',
             ],
+            morePhotosCount: 18,
           ),
           AppStyles.bigSeparator,
           // Zona 6: Etapes

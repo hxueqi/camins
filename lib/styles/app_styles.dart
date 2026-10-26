@@ -10,6 +10,7 @@ class AppStyles {
   static final Color background = Color(0xFFF6F8F7);
   static final Color white = Colors.white;
   static final Color divider = Color(0xFFE6EBE9);
+  static final Color photoOverlay = Colors.black54;
 
   // Separators
   static final Widget tinySeparator = SizedBox(width: 4, height: 4);
@@ -27,6 +28,11 @@ class AppStyles {
   static const double photoRadius = 12;
   static const double stageRowHeight = 68;
   static const double stageCircleSize = 32;
+  static const double stageLineWidth = 2;
+  static const double statsCardOverlap = 44;
+  static const double roundButtonSize = 44;
+  static const double roundButtonTop = 44;
+  static const double roundButtonSide = 16;
 
   // Text styles
   static final TextStyle trailTitle = TextStyle(
@@ -81,6 +87,11 @@ class AppStyles {
   );
   static final TextStyle ratingValue = TextStyle(
     fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: white,
+  );
+  static final TextStyle photoOverlayText = TextStyle(
+    fontSize: 22,
     fontWeight: FontWeight.bold,
     color: white,
   );

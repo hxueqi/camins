@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:camins/styles/app_styles.dart';
+import 'package:camins/widgets/circle_icon_button.dart';
 
 class TrailHeader extends StatelessWidget {
   const TrailHeader({
@@ -9,6 +10,7 @@ class TrailHeader extends StatelessWidget {
     required this.title,
     required this.rating,
     required this.reviewCount,
+    this.bottomInset = 0,
   });
 
   final String imagePath;
@@ -16,6 +18,9 @@ class TrailHeader extends StatelessWidget {
   final String title;
   final String rating;
   final int reviewCount;
+
+  /// Space reserved at the bottom for a widget that overlaps the image.
+  final double bottomInset;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +41,23 @@ class TrailHeader extends StatelessWidget {
             ),
           ),
           Positioned(
+            top: AppStyles.roundButtonTop,
+            left: AppStyles.roundButtonSide,
+            right: AppStyles.roundButtonSide,
+            child: Row(
+              children: [
+                CircleIconButton(icon: Icons.arrow_back_ios_new),
+                Spacer(),
+                CircleIconButton(icon: Icons.share),
+                AppStyles.smallSeparator,
+                CircleIconButton(icon: Icons.favorite_border),
+              ],
+            ),
+          ),
+          Positioned(
             left: AppStyles.horizontalPadding,
             right: AppStyles.horizontalPadding,
-            bottom: AppStyles.horizontalPadding,
+            bottom: AppStyles.horizontalPadding + bottomInset,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
