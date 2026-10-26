@@ -46,5 +46,15 @@ class AppStyles {
     fontSize: 11,
     fontWeight: FontWeight.bold,
     color: white,
+    letterSpacing: 1,
+  );
+  static final TextStyle ratingValue = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: white,
+  );
+  static final TextStyle ratingCount = TextStyle(
+    fontSize: 15,
+    color: Colors.white70,
   );
 }
