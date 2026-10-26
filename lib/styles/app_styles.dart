@@ -22,6 +22,8 @@ class AppStyles {
   static const double headerHeight = 320;
   static const double cardMargin = 16;
   static const double statsCardHeight = 88;
+  static const double buttonHeight = 48;
+  static const double buttonRadius = 14;
 
   // Text styles
   static final TextStyle trailTitle = TextStyle(
@@ -50,6 +52,10 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     color: white,
     letterSpacing: 1,
+  );
+  static final TextStyle buttonText = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
   );
   static final TextStyle tagText = TextStyle(
     fontSize: 13,

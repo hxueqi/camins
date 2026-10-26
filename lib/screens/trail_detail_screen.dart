@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:camins/models/trail_tag.dart';
 import 'package:camins/styles/app_styles.dart';
 import 'package:camins/widgets/about_section.dart';
+import 'package:camins/widgets/bottom_action_bar.dart';
 import 'package:camins/widgets/stats_card.dart';
 import 'package:camins/widgets/trail_header.dart';
 
@@ -57,7 +58,8 @@ class TrailDetailScreen extends StatelessWidget {
           AppStyles.bigSeparator,
         ],
       ),
-      // bottomNavigationBar: aquí anirà la barra inferior
+      // Zona 7: Barra inferior
+      bottomNavigationBar: BottomActionBar(startingPoint: 'Banys de Tredòs'),
     );
   }
 }
