@@ -51,6 +51,11 @@ class AppStyles {
     color: white,
     letterSpacing: 1,
   );
+  static final TextStyle tagText = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: green,
+  );
   static final TextStyle ratingValue = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,

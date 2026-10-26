@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:camins/models/trail_tag.dart';
 import 'package:camins/styles/app_styles.dart';
+import 'package:camins/widgets/about_section.dart';
 import 'package:camins/widgets/stats_card.dart';
 import 'package:camins/widgets/trail_header.dart';
 
@@ -36,6 +38,23 @@ class TrailDetailScreen extends StatelessWidget {
               difficulty: 'Moderada',
             ),
           ),
+          AppStyles.bigSeparator,
+          // Zona 4: Sobre la ruta
+          AboutSection(
+            description:
+                "Una volta circular pel cor del circ de Colomers, amb una "
+                "desena d'estanys d'origen glacial. El camí està ben "
+                'senyalitzat i la pujada és constant però sense trams '
+                'tècnics. Ideal per a finals de primavera i estiu.',
+            tags: [
+              TrailTag(icon: Icons.loop, label: 'Circular'),
+              TrailTag(icon: Icons.water, label: 'Estanys'),
+              TrailTag(icon: Icons.pets, label: 'Gossos permesos'),
+              TrailTag(icon: Icons.water_drop, label: "Font d'aigua"),
+              TrailTag(icon: Icons.cabin, label: 'Refugi'),
+            ],
+          ),
+          AppStyles.bigSeparator,
         ],
       ),
       // bottomNavigationBar: aquí anirà la barra inferior
