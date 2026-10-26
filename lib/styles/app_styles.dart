@@ -9,6 +9,7 @@ class AppStyles {
   static final Color greyText = Color(0xFF6B7A80);
   static final Color background = Color(0xFFF6F8F7);
   static final Color white = Colors.white;
+  static final Color divider = Color(0xFFE6EBE9);
 
   // Separators
   static final Widget tinySeparator = SizedBox(width: 4, height: 4);
@@ -19,6 +20,8 @@ class AppStyles {
   // Sizes
   static const double horizontalPadding = 20;
   static const double headerHeight = 320;
+  static const double cardMargin = 16;
+  static const double statsCardHeight = 88;
 
   // Text styles
   static final TextStyle trailTitle = TextStyle(
