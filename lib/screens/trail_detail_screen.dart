@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:camins/models/trail_stage.dart';
 import 'package:camins/models/trail_tag.dart';
 import 'package:camins/styles/app_styles.dart';
 import 'package:camins/widgets/about_section.dart';
 import 'package:camins/widgets/bottom_action_bar.dart';
 import 'package:camins/widgets/photo_grid.dart';
+import 'package:camins/widgets/stages_section.dart';
 import 'package:camins/widgets/stats_card.dart';
 import 'package:camins/widgets/trail_header.dart';
 
@@ -66,6 +68,37 @@ class TrailDetailScreen extends StatelessWidget {
               'assets/images/meadow.jpg',
               'assets/images/waterfall.jpg',
               'assets/images/sunset.jpg',
+            ],
+          ),
+          AppStyles.bigSeparator,
+          // Zona 6: Etapes
+          StagesSection(
+            stages: [
+              TrailStage(
+                name: 'Banys de Tredòs',
+                detail: 'Sortida · 1.750 m',
+                time: '0:00',
+              ),
+              TrailStage(
+                name: 'Refugi de Colomers',
+                detail: '3,1 km · 2.135 m',
+                time: '1:10',
+              ),
+              TrailStage(
+                name: 'Estany Major',
+                detail: '4,6 km · 2.180 m',
+                time: '1:45',
+              ),
+              TrailStage(
+                name: 'Estany Obago',
+                detail: '6,2 km · 2.240 m',
+                time: '2:30',
+              ),
+              TrailStage(
+                name: 'Tornada als Banys',
+                detail: '9,4 km · 1.750 m',
+                time: '3:45',
+              ),
             ],
           ),
           AppStyles.bigSeparator,

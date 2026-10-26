@@ -25,6 +25,8 @@ class AppStyles {
   static const double buttonHeight = 48;
   static const double buttonRadius = 14;
   static const double photoRadius = 12;
+  static const double stageRowHeight = 68;
+  static const double stageCircleSize = 32;
 
   // Text styles
   static final TextStyle trailTitle = TextStyle(
@@ -53,6 +55,15 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     color: white,
     letterSpacing: 1,
+  );
+  static final TextStyle stageNumber = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+  );
+  static final TextStyle stageTime = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: greyText,
   );
   static final TextStyle linkText = TextStyle(
     fontSize: 15,
